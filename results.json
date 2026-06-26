@@ -1,0 +1,177 @@
+[
+  {
+    "email_id": "phish-001",
+    "score": 70,
+    "category": "phishing",
+    "confidence": 0.7,
+    "explanation": "Risk signals detected: Display Name / Local Part vs. Actual Email Mismatch, Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners, Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "phish-002",
+    "score": 70,
+    "category": "phishing",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "phish-003",
+    "score": 20,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Requests for Credentials or Payment, Too-Good-To-Be-True Offers."
+  },
+  {
+    "email_id": "phish-004",
+    "score": 70,
+    "category": "phishing",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "phish-005",
+    "score": 62,
+    "category": "phishing",
+    "confidence": 0.7,
+    "explanation": "Risk signals detected: Display Name / Local Part vs. Actual Email Mismatch, Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners, Urgency and Threats."
+  },
+  {
+    "email_id": "phish-006",
+    "score": 40,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "phish-007",
+    "score": 62,
+    "category": "scam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Too-Good-To-Be-True Offers."
+  },
+  {
+    "email_id": "phish-008",
+    "score": 60,
+    "category": "phishing",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "phish-009",
+    "score": 62,
+    "category": "phishing",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats."
+  },
+  {
+    "email_id": "phish-010",
+    "score": 40,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Urgency and Threats, Requests for Credentials or Payment."
+  },
+  {
+    "email_id": "border-011",
+    "score": 20,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC)."
+  },
+  {
+    "email_id": "border-012",
+    "score": 50,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting)."
+  },
+  {
+    "email_id": "border-013",
+    "score": 40,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting)."
+  },
+  {
+    "email_id": "border-014",
+    "score": 20,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Lookalike Domain (Typosquatting)."
+  },
+  {
+    "email_id": "border-015",
+    "score": 50,
+    "category": "spam",
+    "confidence": 0.7,
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners."
+  },
+  {
+    "email_id": "legit-016",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-017",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-018",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-019",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-020",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-021",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-022",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-023",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-024",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  },
+  {
+    "email_id": "legit-025",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected."
+  }
+]
