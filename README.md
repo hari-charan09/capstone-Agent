@@ -14,12 +14,15 @@ This project is prepared to deploy its Streamlit dashboard to Google Cloud Run. 
 Run these exact commands from the root of the project:
 
 ```bash
-# Submit the build to Google Cloud Build and tag it
-gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/capstone-dashboard
+# 1. One-time: create an Artifact Registry repo
+gcloud artifacts repositories create capstone-repo --repository-format=docker --location=us-central1
 
-# Deploy the container to Cloud Run
+# 2. Build and tag the image
+gcloud builds submit --tag us-central1-docker.pkg.dev/YOUR_PROJECT_ID/capstone-repo/capstone-dashboard
+
+# 3. Deploy to Cloud Run
 gcloud run deploy capstone-dashboard \
-  --image gcr.io/YOUR_PROJECT_ID/capstone-dashboard \
+  --image us-central1-docker.pkg.dev/YOUR_PROJECT_ID/capstone-repo/capstone-dashboard \
   --platform managed \
   --region us-central1 \
   --allow-unauthenticated
