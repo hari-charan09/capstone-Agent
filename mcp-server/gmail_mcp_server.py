@@ -20,6 +20,7 @@ import base64
 import re
 import sys
 from email import message_from_bytes
+from email.header import decode_header, make_header
 from html.parser import HTMLParser
 from typing import Any
 
@@ -28,6 +29,29 @@ from mcp.server import Server
 from mcp.server.stdio import stdio_server
 
 from gmail_auth import get_gmail_service
+
+# ---------------------------------------------------------------------------
+# Rate limiting — simple inter-call delay to avoid Gmail API quota errors
+# ---------------------------------------------------------------------------
+import time
+
+_RATE_LIMIT_SECONDS = 0.5
+_last_api_call_time = 0.0
+
+
+def _rate_limited_execute(request):
+    """
+    Execute a Gmail API request with a minimum delay between consecutive calls.
+    Prevents hitting per-user rate limits on the Gmail API.
+    """
+    global _last_api_call_time
+    now = time.monotonic()
+    elapsed = now - _last_api_call_time
+    if elapsed < _RATE_LIMIT_SECONDS:
+        time.sleep(_RATE_LIMIT_SECONDS - elapsed)
+    result = request.execute()
+    _last_api_call_time = time.monotonic()
+    return result
 
 # ---------------------------------------------------------------------------
 # MCP Server setup
@@ -121,21 +145,19 @@ async def call_tool(
 
 def _list_messages(service, max_results: int = 10) -> list[dict]:
     """Return [{id, snippet}, …] for the most recent messages."""
-    response = (
+    response = _rate_limited_execute(
         service.users()
         .messages()
         .list(userId="me", maxResults=max_results)
-        .execute()
     )
     messages = response.get("messages", [])
     result = []
     for msg in messages:
-        detail = (
+        detail = _rate_limited_execute(
             service.users()
             .messages()
             .get(userId="me", id=msg["id"], format="metadata",
                  metadataHeaders=["Subject"])
-            .execute()
         )
         result.append(
             {
@@ -158,19 +180,18 @@ def _get_message(service, message_id: str) -> dict:
         "headers": {"spf": str, "dkim": str, "dmarc": str}
     }
     """
-    raw_msg = (
+    raw_msg = _rate_limited_execute(
         service.users()
         .messages()
         .get(userId="me", id=message_id, format="raw")
-        .execute()
     )
 
     raw_bytes = base64.urlsafe_b64decode(raw_msg["raw"] + "==")
     email_msg = message_from_bytes(raw_bytes)
 
-    # --- Basic headers ---
-    sender = email_msg.get("From", "")
-    subject = email_msg.get("Subject", "")
+    # --- Basic headers (decoded from RFC 2047 encoded-word format) ---
+    sender = _decode_mime_header(email_msg.get("From", ""))
+    subject = _decode_mime_header(email_msg.get("Subject", ""))
 
     # --- Body text ---
     body_text = _extract_body_text(email_msg)
@@ -203,11 +224,10 @@ def _get_message(service, message_id: str) -> dict:
 
 def _get_headers(service, message_id: str) -> dict:
     """Return a flat {name: value} dict of all raw headers."""
-    msg = (
+    msg = _rate_limited_execute(
         service.users()
         .messages()
         .get(userId="me", id=message_id, format="full")
-        .execute()
     )
     payload = msg.get("payload", {})
     headers = payload.get("headers", [])
@@ -217,6 +237,23 @@ def _get_headers(service, message_id: str) -> dict:
 # ---------------------------------------------------------------------------
 # Extraction helpers
 # ---------------------------------------------------------------------------
+
+def _decode_mime_header(raw: str) -> str:
+    """
+    Decode an RFC 2047 encoded-word header value into a plain Unicode string.
+
+    Handles values like:
+        =?utf-8?B?VXBncmFkZSB5b3Ugc...?=   (base64-encoded)
+        =?utf-8?Q?Hello=20World?=            (quoted-printable encoded)
+        Plain text with no encoding          (returned as-is)
+    """
+    if not raw:
+        return ""
+    try:
+        return str(make_header(decode_header(raw)))
+    except Exception:
+        # Fallback: return the raw string if decoding fails
+        return raw
 
 class _HTMLTextExtractor(HTMLParser):
     """Minimal HTML parser that collects visible text, skipping scripts/styles."""

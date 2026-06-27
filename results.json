@@ -1,177 +1,137 @@
 [
   {
-    "email_id": "phish-001",
-    "score": 70,
-    "category": "phishing",
-    "confidence": 0.7,
-    "explanation": "Risk signals detected: Display Name / Local Part vs. Actual Email Mismatch, Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners, Urgency and Threats, Requests for Credentials or Payment."
-  },
-  {
-    "email_id": "phish-002",
-    "score": 70,
-    "category": "phishing",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
-  },
-  {
-    "email_id": "phish-003",
-    "score": 20,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Requests for Credentials or Payment, Too-Good-To-Be-True Offers."
-  },
-  {
-    "email_id": "phish-004",
-    "score": 70,
-    "category": "phishing",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
-  },
-  {
-    "email_id": "phish-005",
-    "score": 62,
-    "category": "phishing",
-    "confidence": 0.7,
-    "explanation": "Risk signals detected: Display Name / Local Part vs. Actual Email Mismatch, Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners, Urgency and Threats."
-  },
-  {
-    "email_id": "phish-006",
+    "email_id": "19f0400907e39b30",
     "score": 40,
     "category": "spam",
     "confidence": 1.0,
-    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Urgency and Threats, Requests for Credentials or Payment."
+    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Lookalike Domain (Typosquatting).",
+    "subject": "Wow, look at your certificate | Google Gemini QuizOff 2026",
+    "sender": "Unstop Events <updates@unstop.events>"
   },
   {
-    "email_id": "phish-007",
-    "score": 62,
-    "category": "scam",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Too-Good-To-Be-True Offers."
-  },
-  {
-    "email_id": "phish-008",
-    "score": 60,
-    "category": "phishing",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats, Requests for Credentials or Payment."
-  },
-  {
-    "email_id": "phish-009",
-    "score": 62,
-    "category": "phishing",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting), Urgency and Threats."
-  },
-  {
-    "email_id": "phish-010",
-    "score": 40,
-    "category": "spam",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Urgency and Threats, Requests for Credentials or Payment."
-  },
-  {
-    "email_id": "border-011",
-    "score": 20,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC)."
-  },
-  {
-    "email_id": "border-012",
-    "score": 50,
-    "category": "spam",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting)."
-  },
-  {
-    "email_id": "border-013",
-    "score": 40,
-    "category": "spam",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Failed Authentication (SPF/DKIM/DMARC), Lookalike Domain (Typosquatting)."
-  },
-  {
-    "email_id": "border-014",
-    "score": 20,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Lookalike Domain (Typosquatting)."
-  },
-  {
-    "email_id": "border-015",
-    "score": 50,
-    "category": "spam",
-    "confidence": 0.7,
-    "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Failed Authentication (SPF/DKIM/DMARC), Use of URL Shorteners."
-  },
-  {
-    "email_id": "legit-016",
+    "email_id": "19f03bffe3ace15a",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Stand a chance to win an Apple Watch ⌚",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
   },
   {
-    "email_id": "legit-017",
+    "email_id": "19f033309f3abbec",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Upgrade you home with Samsung AI appliances",
+    "sender": "\"Samsung Electronics India\" <samsung@in.email.samsung.com>"
   },
   {
-    "email_id": "legit-018",
+    "email_id": "19f02afa4ec53da2",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Missing Link: Finalize your track project for INDIA RUNS!",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
   },
   {
-    "email_id": "legit-019",
+    "email_id": "19f02a9caa1ad163",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Announcement - OSC AI Build 1.0",
+    "sender": "HackCulture <noreply@hackculture.in>"
   },
   {
-    "email_id": "legit-020",
+    "email_id": "19f025c53eb6f106",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "LeetCode Weekly Digest",
+    "sender": "LeetCode <no-reply@leetcode.com>"
   },
   {
-    "email_id": "legit-021",
+    "email_id": "19f01fb9707f8059",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Inhouse ERP Consultant (w/m/d) at Novicon Hungary",
+    "sender": "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>"
   },
   {
-    "email_id": "legit-022",
+    "email_id": "19effcbb29528f83",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Closing in 2 hours: Submit your score to stay eligible for\r\n exclusive rewards",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
   },
   {
-    "email_id": "legit-023",
+    "email_id": "19eff6b359ca5b26",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "What Do 33,000 Inventions Tell Us About Diverse Teams?",
+    "sender": "Siemens via LinkedIn <newsletters-noreply@linkedin.com>"
   },
   {
-    "email_id": "legit-024",
+    "email_id": "19eff043c6048441",
+    "score": 12,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Urgency and Threats.",
+    "subject": "Last Chance: Lock in your reward eligibility for the AI Resume\r\n Challenge",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19efda0d487f4d51",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Submission Updated for INDIA RUNS",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
   },
   {
-    "email_id": "legit-025",
+    "email_id": "19efda0bc6b7dee7",
     "score": 0,
     "category": "safe",
     "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected."
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Submission Updated for INDIA RUNS",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19efda0a57781d17",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Submission Updated for INDIA RUNS",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19efd80c79939eea",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "IDC MarketScape Names Slack a Leader in Worldwide Team Collaboration",
+    "sender": "\"Slack from Salesforce\" <apacemarketing@mail.salesforce.com>"
+  },
+  {
+    "email_id": "19efd70d04c454cc",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Update On your Campus Mantri Application",
+    "sender": "GeeksforGeeks <no-reply@geeksforgeeks.org>"
   }
 ]

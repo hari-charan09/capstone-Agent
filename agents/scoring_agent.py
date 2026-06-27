@@ -220,9 +220,15 @@ def score_email(email: dict) -> dict:
         "verify your identity", "verify your credentials", "verify bank details",
         "recovery seed phrase", "payment details", "billing details",
         "update your login", "change your password", "processing fee", "surcharge",
-        "registration fee", "recovery seed"
+        "registration fee", "recovery seed", "recovery phrase"
     ]
-    if any(re.search(r'\b' + re.escape(kw) + r'\b', (subject + " " + body_text).lower()) for kw in credential_keywords):
+    credential_patterns = [
+        r"\bverify\b.*\bbank\b",
+        r"\bbank\b.*\bdetails\b"
+    ]
+    has_credential_signal = any(re.search(r'\b' + re.escape(kw) + r'\b', (subject + " " + body_text).lower()) for kw in credential_keywords) or \
+                             any(re.search(pat, (subject + " " + body_text).lower()) for pat in credential_patterns)
+    if has_credential_signal:
         signals_language.append("Requests for Credentials or Payment")
 
     # Signal C: Too-Good-To-Be-True Offers
@@ -237,7 +243,13 @@ def score_email(email: dict) -> dict:
     # Checked via body text references for simplicity (since schema has no attachments field)
     # Signal A: Unexpected Attachments
     attachment_keywords = ["attached file", "attached invoice", "attached receipt", "shipping document"]
-    if any(kw in body_text.lower() for kw in attachment_keywords):
+    attachment_patterns = [
+        r"\battached\b.*\binvoice\b",
+        r"\battached\b.*\breceipt\b"
+    ]
+    has_attachment_signal = any(kw in body_text.lower() for kw in attachment_keywords) or \
+                            any(re.search(pat, body_text.lower()) for pat in attachment_patterns)
+    if has_attachment_signal:
         signals_attachment.append("Unexpected Attachments")
 
     # Signal B: Dangerous File Extensions
@@ -258,20 +270,20 @@ def score_email(email: dict) -> dict:
     # Sender Authenticity (Max 30 pts)
     score_sender = 0
     if len(signals_sender) > 0:
-        score_sender = 20 + (len(signals_sender) - 1) * 10
+        score_sender = 25 + (len(signals_sender) - 1) * 10
     score_sender = min(score_sender, 30)
 
     # Link Analysis (Max 30 pts)
     score_links = 0
     if len(signals_links) > 0:
-        score_links = 20 + (len(signals_links) - 1) * 10
+        score_links = 25 + (len(signals_links) - 1) * 10
     score_links = min(score_links, 30)
 
-    # Language and Psychological Pressure (Max 20 pts)
+    # Language and Psychological Pressure (Max 27 pts)
     score_language = 0
     if len(signals_language) > 0:
-        score_language = 12 + (len(signals_language) - 1) * 8
-    score_language = min(score_language, 20)
+        score_language = 15 + (len(signals_language) - 1) * 12
+    score_language = min(score_language, 27)
 
     # Attachment and Content Risk (Max 20 pts)
     score_attachment = 0

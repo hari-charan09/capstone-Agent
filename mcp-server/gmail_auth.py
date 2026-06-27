@@ -18,7 +18,12 @@ from googleapiclient.discovery import build
 # Constants
 # ---------------------------------------------------------------------------
 
-# READONLY only — no send / modify / insert scopes
+# SECURITY: The OAuth scope below is intentionally restricted to gmail.readonly.
+# This grants ONLY read access to the user's Gmail messages and metadata.
+# It does NOT permit sending, drafting, modifying, deleting, or inserting
+# messages. Any broader scope (e.g. gmail.modify, gmail.send, gmail.compose,
+# mail.google.com) would violate this project's read-only security posture.
+# Do not widen this scope without a formal security review.
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 # Resolve paths relative to the *project root* (one level up from mcp-server/)

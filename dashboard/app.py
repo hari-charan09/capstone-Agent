@@ -155,25 +155,17 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 @st.cache_data
 def load_data():
     results_path  = os.path.join(PROJECT_ROOT, "results.json")
-    emails_path   = os.path.join(PROJECT_ROOT, "mock-data", "sample-emails.json")
 
     with open(results_path,  "r", encoding="utf-8") as f:
         results = json.load(f)
-    with open(emails_path,   "r", encoding="utf-8") as f:
-        emails  = json.load(f)
 
-    # Build lookup: id -> {subject, sender}
-    email_meta = {e["id"]: {"subject": e.get("subject", ""), "sender": e.get("sender", "")}
-                  for e in emails}
-
-    # Merge
+    # Extract directly from results.json entries
     rows = []
     for r in results:
-        meta = email_meta.get(r["email_id"], {})
         rows.append({
             "email_id":    r["email_id"],
-            "subject":     meta.get("subject", "—"),
-            "sender":      meta.get("sender",  "—"),
+            "subject":     r.get("subject", "—"),
+            "sender":      r.get("sender",  "—"),
             "score":       r["score"],
             "category":    r["category"],
             "confidence":  r["confidence"],
@@ -190,7 +182,7 @@ def load_data():
 try:
     df = load_data()
 except FileNotFoundError as e:
-    st.error(f"⚠️ Could not load data: {e}. Make sure results.json and mock-data/sample-emails.json exist.")
+    st.error(f"⚠️ Could not load data: {e}. Make sure results.json exists.")
     st.stop()
 
 

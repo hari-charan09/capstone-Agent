@@ -219,6 +219,7 @@ __marimo__/
 
 credentials.json
 token.json
+audit-log.jsonl
 __pycache__/
 .env
 *.pyc
