@@ -1,7 +1,124 @@
 [
   {
+    "email_id": "19f099784767e879",
+    "score": 15,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Urgency and Threats.",
+    "subject": "Action Required: Your project status is still marked as [Empty]",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19f0977ef51a0b6f",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Yes, the AI Resume Challenge is still going on this weekend",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19f08438d922cff1",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Team merge confirmation",
+    "sender": "Kaggle <kaggle-noreply@google.com>"
+  },
+  {
+    "email_id": "19f07be09a6bee84",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Last Chance to Submit Before the Portal Closes",
+    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
+  },
+  {
+    "email_id": "19f078fd13882ada",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Sachbearbeiter/ Sachbearbeiterin kulturelle Veranstaltungen (m/w/d)\r\n at Stadt Zwickau",
+    "sender": "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>"
+  },
+  {
+    "email_id": "19f07220f938dd0a",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "“Analyst” and similar jobs",
+    "sender": "LinkedIn <jobalerts-noreply@linkedin.com>"
+  },
+  {
+    "email_id": "19f06463c68a63ac",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Adarsh accepted your invitation, explore their network",
+    "sender": "Adarsh Madre via LinkedIn <invitations@linkedin.com>"
+  },
+  {
+    "email_id": "19f05e7bc92c5234",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Courses you can complete in 8 hours or less",
+    "sender": "\"Coursera\" <Coursera@m.learn.coursera.org>"
+  },
+  {
+    "email_id": "19f05d874208cde3",
+    "score": 30,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Display Text vs. URL Destination Mismatch, Lookalike Domain (Typosquatting).",
+    "subject": "I want to connect",
+    "sender": "Naga harshitha Medishetty <invitations@linkedin.com>"
+  },
+  {
+    "email_id": "19f056a9a888e610",
+    "score": 30,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Display Text vs. URL Destination Mismatch, Lookalike Domain (Typosquatting).",
+    "subject": "I want to connect",
+    "sender": "Naga harshitha Medishetty <invitations@linkedin.com>"
+  },
+  {
+    "email_id": "19f04fcc2b8a0d70",
+    "score": 30,
+    "category": "spam",
+    "confidence": 1.0,
+    "explanation": "Risk signals detected: Display Text vs. URL Destination Mismatch, Lookalike Domain (Typosquatting).",
+    "subject": "I want to connect",
+    "sender": "Naga harshitha Medishetty <invitations@linkedin.com>"
+  },
+  {
+    "email_id": "19f04e4da5959a6c",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Team merge confirmation",
+    "sender": "Kaggle <kaggle-noreply@google.com>"
+  },
+  {
+    "email_id": "19f04e1f599e3e0e",
+    "score": 0,
+    "category": "safe",
+    "confidence": 1.0,
+    "explanation": "No suspicious phishing or fraud risk signals were detected.",
+    "subject": "Team merge confirmation",
+    "sender": "Kaggle <kaggle-noreply@google.com>"
+  },
+  {
     "email_id": "19f0400907e39b30",
-    "score": 40,
+    "score": 50,
     "category": "spam",
     "confidence": 1.0,
     "explanation": "Risk signals detected: Domain Mismatch (Claimed Org vs. Actual Domain), Lookalike Domain (Typosquatting).",
@@ -16,122 +133,5 @@
     "explanation": "No suspicious phishing or fraud risk signals were detected.",
     "subject": "Stand a chance to win an Apple Watch ⌚",
     "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19f033309f3abbec",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Upgrade you home with Samsung AI appliances",
-    "sender": "\"Samsung Electronics India\" <samsung@in.email.samsung.com>"
-  },
-  {
-    "email_id": "19f02afa4ec53da2",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Missing Link: Finalize your track project for INDIA RUNS!",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19f02a9caa1ad163",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Announcement - OSC AI Build 1.0",
-    "sender": "HackCulture <noreply@hackculture.in>"
-  },
-  {
-    "email_id": "19f025c53eb6f106",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "LeetCode Weekly Digest",
-    "sender": "LeetCode <no-reply@leetcode.com>"
-  },
-  {
-    "email_id": "19f01fb9707f8059",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Inhouse ERP Consultant (w/m/d) at Novicon Hungary",
-    "sender": "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>"
-  },
-  {
-    "email_id": "19effcbb29528f83",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Closing in 2 hours: Submit your score to stay eligible for\r\n exclusive rewards",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19eff6b359ca5b26",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "What Do 33,000 Inventions Tell Us About Diverse Teams?",
-    "sender": "Siemens via LinkedIn <newsletters-noreply@linkedin.com>"
-  },
-  {
-    "email_id": "19eff043c6048441",
-    "score": 12,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "Risk signals detected: Urgency and Threats.",
-    "subject": "Last Chance: Lock in your reward eligibility for the AI Resume\r\n Challenge",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19efda0d487f4d51",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Submission Updated for INDIA RUNS",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19efda0bc6b7dee7",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Submission Updated for INDIA RUNS",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19efda0a57781d17",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Submission Updated for INDIA RUNS",
-    "sender": "INDIA RUNS <admin@no-reply.hack2skill.com>"
-  },
-  {
-    "email_id": "19efd80c79939eea",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "IDC MarketScape Names Slack a Leader in Worldwide Team Collaboration",
-    "sender": "\"Slack from Salesforce\" <apacemarketing@mail.salesforce.com>"
-  },
-  {
-    "email_id": "19efd70d04c454cc",
-    "score": 0,
-    "category": "safe",
-    "confidence": 1.0,
-    "explanation": "No suspicious phishing or fraud risk signals were detected.",
-    "subject": "Update On your Campus Mantri Application",
-    "sender": "GeeksforGeeks <no-reply@geeksforgeeks.org>"
   }
 ]
