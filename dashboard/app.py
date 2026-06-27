@@ -155,8 +155,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 @st.cache_data
 def load_data():
     results_path  = os.path.join(PROJECT_ROOT, "results.json")
+    demo_path     = os.path.join(PROJECT_ROOT, "results-demo.json")
 
-    with open(results_path,  "r", encoding="utf-8") as f:
+    load_path = results_path if os.path.exists(results_path) else demo_path
+
+    with open(load_path,  "r", encoding="utf-8") as f:
         results = json.load(f)
 
     # Extract directly from results.json entries

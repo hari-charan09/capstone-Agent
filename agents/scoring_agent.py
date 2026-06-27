@@ -324,7 +324,7 @@ def score_email(email: dict) -> dict:
 
 def main():
     mock_data_path = os.path.join("mock-data", "sample-emails.json")
-    results_path = "results.json"
+    results_path = "results-demo.json"
 
     if not os.path.exists(mock_data_path):
         print(f"Error: Mock data file not found at {mock_data_path}")
@@ -341,6 +341,8 @@ def main():
     for email in emails:
         try:
             res = score_email(email)
+            res["subject"] = email.get("subject", "")
+            res["sender"] = email.get("sender", "")
             results.append(res)
             print(f"ID: {res['email_id']} | Score: {res['score']} | Category: {res['category']}")
         except KeyError as e:
